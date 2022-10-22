@@ -1,6 +1,7 @@
 html, body {
   margin: 0;
   font-family: HelveticaNeue-Light, "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  background: #F7F8F9;
 }
 
 .screen {
@@ -17,4 +18,21 @@ html, body {
   border-radius: 10px;
   color: white;
   padding: 10px 20px;
+}
+
+#menu #userCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#menu #menuOptions {
+  display: flex;
+  flex-direction: column;
+}
+#menu #menuOptions .menuOption {
+  background: white;
+  width: 100%;
+  border-radius: 10px;
+  padding: 10px 0px;
+  margin-bottom: 10px;
 }/*# sourceMappingURL=style.css.map */
