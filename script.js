@@ -6,12 +6,20 @@ const screens = {
     "MENU": document.getElementById("menu"),
     "CONTENT": document.getElementById("content")
 };
+/**
+ * This loads friends.json file into an object called freindsList
+ */
+var friendsList = fetchFriends();
+function fetchFriends() {
+    fetch("friends.json")
+      .then((res) => {
+        return res.json();
+      })
+      .then((data) => {
+        friendsList = data;
+      });
+  }
 
-// function hideContent() {
-//     screens.MENU.style.display = "none";
-//     screens.CONTENT.style.display = "none";
-    
-// }
 
 document.getElementById("login").addEventListener("click", (e) =>{
     screens.MENU.scrollIntoView();
