@@ -2,6 +2,7 @@ html,body {
     margin:0;
     // overflow: hidden; //Uncomment to hide screens beyond Welcome
     font-family: HelveticaNeue-Light,'Helvetica Neue Light','Helvetica Neue',Helvetica,Arial,'Lucida Grande',sans-serif;
+    background: #F7F8F9;
 }
 .screen{
     height: 100vh;
@@ -18,4 +19,15 @@ html,body {
     border-radius: 10px;
     color: white;
     padding: 10px 20px;
+}
+
+#menuOptions {
+    display: flex;
+    flex-direction: column;
+    .menuOption{
+        background: white;
+        width: 100%;
+        border-radius: 10px;
+        padding: 10px 20px;
+    }
 }
