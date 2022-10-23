@@ -60,7 +60,7 @@ var friendsList;
     var file = document.getElementById("selectFiles").files;
     if (file.length <= 0) {
       return false;
-    };
+    }
     screens.MENU.scrollIntoView({behavior: "smooth"});
     // friendsList = new FileReader();
     // friendsList.readAsText(file.item(0))
@@ -135,15 +135,9 @@ function removeAllChilds() {
 }
 
 /**
+ * This moves the user to the menu screen
  * button click eventListeners -> scroll into view
  */
-/**
- * This moves the user to the menu screen
- */
-document.getElementById("login").addEventListener("click", (e) =>{
-    screens.MENU.scrollIntoView({behavior: "smooth"});
-});
-
 document.getElementById("friends").addEventListener("click", (e) =>{
 removeAllChilds()
 screens.CONTENT.scrollIntoView("behavior: smooth");
