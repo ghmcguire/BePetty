@@ -97,6 +97,13 @@ html, body {
   font-weight: bold;
   color: black;
 }
+#contentScreen #friendContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+  align-items: center;
+}
 #contentScreen .card {
   background: #FFFFFF;
   border-radius: 10px;

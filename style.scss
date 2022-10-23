@@ -101,6 +101,13 @@ html,body {
             color: black;
         }
     }
+    #friendContainer {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-content: center;
+        align-items: center;
+    }
     .card {
         background: #FFFFFF;
         border-radius: 10px;
