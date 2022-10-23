@@ -1,6 +1,6 @@
 html,body {
     margin:0;
-    //overflow: hidden; //Uncomment to hide screens beyond Welcome
+    overflow: hidden; //Uncomment to hide screens beyond Welcome
     font-family: HelveticaNeue-Light,'Helvetica Neue Light','Helvetica Neue',Helvetica,Arial,'Lucida Grande',sans-serif;
     background: #F7F8F9;
 }
@@ -99,6 +99,9 @@ html,body {
     background: #20BFF1;
     background: linear-gradient(180deg, rgba(11,153,232,1) 0%, rgba(32,191,241,1) 35%, rgba(0,237,255,1) 100%);
     #contentHeaderBar {
+        position: sticky;
+        top: 0%;
+        background: white;
         #openMenu {
             width: 100vw;
             display: flex;
@@ -112,6 +115,7 @@ html,body {
         }
     }
     #friendContainer {
+        // overflow: scroll;
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
