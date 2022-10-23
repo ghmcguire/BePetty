@@ -19,17 +19,25 @@ html, body {
 
 #welcomeScreen {
   justify-content: space-evenly;
+  background: #20BFF1;
+  background: linear-gradient(180deg, rgb(11, 153, 232) 0%, rgb(32, 191, 241) 35%, rgb(0, 237, 255) 100%);
+}
+#welcomeScreen h1 {
+  font-size: 66px;
+  font-family: ui-monospace;
 }
 
 #login {
-  background: #000000;
+  background: #FFFC00;
   border-radius: 10px;
-  color: white;
+  color: black;
   padding: 10px 20px;
 }
 
 #menuScreen {
   justify-content: center;
+  background: #20BFF1;
+  background: linear-gradient(180deg, rgb(11, 153, 232) 0%, rgb(32, 191, 241) 35%, rgb(0, 237, 255) 100%);
 }
 #menuScreen #userCard {
   display: flex;
@@ -86,6 +94,10 @@ html, body {
   color: #707070;
 }
 
+#contentScreen {
+  background: #20BFF1;
+  background: linear-gradient(180deg, rgb(11, 153, 232) 0%, rgb(32, 191, 241) 35%, rgb(0, 237, 255) 100%);
+}
 #contentScreen #contentHeaderBar #openMenu {
   width: 100vw;
   display: flex;
