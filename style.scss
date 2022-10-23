@@ -38,13 +38,13 @@ html,body {
             padding-bottom: 10%;
             .userSnapcode {
                 height: auto;
-                width: 50vw;
+                width: 40vw;
             }
             #userFullName {
-                margin: 0;
+                margin: 5px;
             }
             #username {
-                margin: 0;
+                margin: 5px;
                 color: #707070;
                 font-weight: 400;
             }
@@ -99,6 +99,23 @@ html,body {
             flex-wrap: nowrap;
             font-weight: bold;
             color: black;
+        }
+    }
+    .card {
+        background: #FFFFFF;
+        border-radius: 10px;
+        width: 33vw;
+        .userSnapcode {
+            height: auto;
+            width: 50vw;
+        }
+        .userFullName {
+            margin: 10px;
+        }
+        .username {
+            margin: 10px;
+            color: #707070;
+            font-weight: 400;
         }
     }
 }
