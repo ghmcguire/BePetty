@@ -6,16 +6,18 @@
         <link rel="stylesheet" type="text/css" as="style" href="style.css">
         <script defer src="script.js"></script>
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <link rel="manifest" href="manifest.json">
     </head>
     <body>
         <div class="screen" id="welcomeScreen">
-             <h1>Welcome</h1>
+            <h1>BePetty</h1>
+            <p>See who your fake friends are on Snapchat</p>
              <input type="file" id="selectFiles" value="Import" /><br />
              <a id="login">Upload</a>
         </div>
        <div class="screen" id="menuScreen">
             <div id="userCard">
-                <img class="userSnapcode" id="userImage" src="https://app.snapchat.com/web/deeplink/snapcode?username=gabe_mcguire&type=SVG&bitmoji=disable">
+                <img class="userSnapcode" id="userImage">
                 <h2 id="userFullName">User's Name</h2>
                 <h3 id="username">@username</h3>
             </div>
@@ -77,6 +79,9 @@
                     <h3><i class="fa-solid fa-chevron-up"></i></h3>
                     <h1 id="screenHeader">Header</h1>
                  </a>
+            </div>
+            <div id="friendContainer">
+                
             </div>
        </div>
     </body>

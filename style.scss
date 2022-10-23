@@ -18,7 +18,7 @@ html,body {
 }
 
 #welcomeScreen {
-    justify-content: center;
+    justify-content: space-evenly;
 }
 
 #login {
@@ -100,6 +100,13 @@ html,body {
             font-weight: bold;
             color: black;
         }
+    }
+    #friendContainer {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-content: center;
+        align-items: center;
     }
     .card {
         background: #FFFFFF;
