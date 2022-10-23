@@ -65,7 +65,7 @@ var friendsList;
     var file = document.getElementById("selectFiles").files;
     if (file.length <= 0) {
       return false;
-    };
+    }
     screens.MENU.scrollIntoView({behavior: "smooth"});
     // friendsList = new FileReader();
     // friendsList.readAsText(file.item(0))
@@ -140,6 +140,7 @@ function removeAllChilds() {
 }
 
 /**
+ * This moves the user to the menu screen
  * button click eventListeners -> scroll into view
  */
 /**
