@@ -46,6 +46,7 @@ function fetchFriends() {
   document.getElementById("pPending").innerHTML = friendsList["Pending Requests"].length;
 }
 
+/**
  * Sorts users by a specific parameter
  * @param {*} list The array to be sorted. Must be a subarray of friendsList
  *                  (ex. friendsList["friends"])
