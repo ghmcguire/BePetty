@@ -105,13 +105,23 @@ function setUser() {
 }
 
 /**
+ * This allows the user to upload their json file and to scroll afterwards
+ */
+document.getElementById("login").addEventListener("click", (e) =>{
+  document.getElementById("selectFiles").click();  
+  document.getElementById("selectFiles").addEventListener('change', function(e){
+    var jsonFile = document.getElementById("selectFiles").files;
+    if (jsonFile.length <= 0) {
+      return false;
+    };
+    screens.MENU.scrollIntoView({behavior: "smooth"});
+  })
+});
+
+/**
  * This moves the user to the menu screen
  * button click eventListeners -> scroll into view
  */
-document.getElementById("login").addEventListener("click", (e) =>{
-    screens.MENU.scrollIntoView({behavior: "smooth"});
-});
-
 document.getElementById("friends").addEventListener("click", (e) =>{
   screens.CONTENT.scrollIntoView({behavior: "smooth"});
   document.getElementById("screenHeader").innerHTML = "Friends List";
