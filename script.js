@@ -23,6 +23,7 @@ var friendContainer = document.getElementById("friendContainer");
  * This function creates a friend card
  */
 function createCard([img, friendName, username]){
+    let newEl = document.createElement("div");
     let code = `
             <div class="card">
                 <img class="userSnapcode" src="${img}">
@@ -30,10 +31,11 @@ function createCard([img, friendName, username]){
                 <h3 class="username">@${username}</h3>
             </div>
     `;
-    // code.addEventListener("click", (e) => {
-    //     Window.location("https://www.snapchat.com/add/" + ["username"])
-    // })
-    friendContainer.innerHTML += code;
+    newEl.addEventListener("click", (e) => {
+        Window.location("https://www.snapchat.com/add/" + ["username"])
+    })
+    friendContainer.appendChild(newEl);
+    newEl.outerHTML = code;
 }
 
 /**
