@@ -40,18 +40,18 @@ function createCard([img, friendName, username]){
 /**
  * This loads friends.json file into an object called friendsList
  */
-var friendsList = fetchFriends();
-function fetchFriends() {
-    fetch("friends.json")
-      .then((res) => {
-        return res.json();
-      })
-      .then((data) => {
-        friendsList = data;
-        setCount();
-        setUser();
-      });
-}
+// var friendsList = fetchFriends();
+// function fetchFriends() {
+//     fetch("friends.json")
+//       .then((res) => {
+//         return res.json();
+//       })
+//       .then((data) => {
+//         friendsList = data;
+//         setCount();
+//         setUser();
+//       });
+// }
 
 var friendsList;
 
@@ -66,13 +66,13 @@ var friendsList;
       return false;
     }
     screens.MENU.scrollIntoView({behavior: "smooth"});
-    // friendsList = new FileReader();
-    // friendsList.readAsText(file.item(0))
-    // friendsList.onload = () => {
-    //   friendsList = JSON.parse(friendsList.result);
-    //   setUser();
-    //   setCount();
-    // }
+    friendsList = new FileReader();
+    friendsList.readAsText(file.item(0))
+    friendsList.onload = () => {
+      friendsList = JSON.parse(friendsList.result);
+      setUser();
+      setCount();
+    }
   })
 });
 

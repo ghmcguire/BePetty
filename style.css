@@ -1,5 +1,6 @@
 html, body {
   margin: 0;
+  overflow: hidden;
   font-family: HelveticaNeue-Light, "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   background: #F7F8F9;
 }
@@ -98,6 +99,12 @@ html, body {
   background: #20BFF1;
   background: linear-gradient(180deg, rgb(11, 153, 232) 0%, rgb(32, 191, 241) 35%, rgb(0, 237, 255) 100%);
 }
+#contentScreen #contentHeaderBar {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0%;
+  background: white;
+}
 #contentScreen #contentHeaderBar #openMenu {
   width: 100vw;
   display: flex;
@@ -145,4 +152,9 @@ html, body {
   margin: 0px;
   color: #707070;
   font-weight: 400;
+}
+
+a {
+  color: black;
+  text-decoration: none; /* no underline */
 }/*# sourceMappingURL=style.css.map */
