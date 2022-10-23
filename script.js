@@ -2,9 +2,9 @@
  * This is a list of all three screens in the app
  */
 const screens = {
-    "WELCOME": document.getElementById("welcome"),
-    "MENU": document.getElementById("menu"),
-    "CONTENT": document.getElementById("content")
+    "WELCOME": document.getElementById("welcomeScreen"),
+    "MENU": document.getElementById("menuScreen"),
+    "CONTENT": document.getElementById("contentScreen")
 };
 /**
  * This loads friends.json file into an object called friendsList
@@ -18,7 +18,7 @@ function fetchFriends() {
       .then((data) => {
         friendsList = data;
       });
-  }
+}
 
 
 document.getElementById("login").addEventListener("click", (e) =>{
