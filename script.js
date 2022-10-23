@@ -17,6 +17,21 @@ const options = {
     "PENDING": document.getElementById("pendingReqs")
 };
 
+const friendContainer = document.querySelector(".friends-container");
+/**
+ * This function creates a friend card
+ */
+function createCard([img, friendName, username]){
+    let code = `
+    <div class="card">
+            <img class="userSnapcode" src="${img}">
+            <h2 id="friendName">${friendName}</h2>
+            <h3 id="username">${username}</h3>
+        </div>
+    `;
+    products.innerHTML += code;
+}
+
 /**
  * This loads friends.json file into an object called friendsList
  */
