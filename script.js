@@ -17,6 +17,22 @@ const options = {
     "PENDING": document.getElementById("pendingReqs")
 };
 
+var friendContainer = document.querySelector(".friends-container");
+
+/**
+ * This function creates a friend card
+ */
+function createCard([friendName, username]){
+    let code = `
+        <div class="card">
+            <img class="userSnapcode" src="https://app.snapchat.com/web/deeplink/snapcode?username=${username}&type=SVG&bitmoji=disable">
+            <h2 class="friendName">${friendName}</h2>
+            <h3 class="username">${username}</h3>
+        </div>
+    `;
+    products.innerHTML += code;
+}
+
 /**
  * This loads friends.json file into an object called friendsList
  */
@@ -62,7 +78,13 @@ function sortUsers(list, field, reversed) {
         });
     } else {
         output = list.sort(function(a,b) {
-            return a[field] - b[field];
+            if (a[field] < b[field]) {
+                return -1;
+            }
+            if (a[field] > b[field]) {
+                return 1;
+            }
+            return 0;
         });
     }
     if (reversed) {
@@ -72,21 +94,35 @@ function sortUsers(list, field, reversed) {
     }
 }
 
+/**
+ * This sets up the user's profile info
+ */
 function setUser() {
   var mainUser = sortUsers(friendsList["Friends"], "Creation Timestamp", false)[0];
   document.getElementById("userFullName").innerHTML = mainUser["Display Name"];
   document.getElementById("username").innerHTML = "@" + mainUser["Username"];
-  document.getElementById("userImage").innerHTML = "https://app.snapchat.com/web/deeplink/snapcode?username=" + mainUser["Username"] + "&type=SVG&bitmoji=disable";
+  var imgString = "https://app.snapchat.com/web/deeplink/snapcode?username=" + mainUser["Username"] + "&type=SVG&bitmoji=disable";
+  document.getElementById("userImage").src =  imgString; 
 }
+
+/**
+ * This allows the user to upload their json file and to scroll afterwards
+ */
+document.getElementById("login").addEventListener("click", (e) =>{
+  document.getElementById("selectFiles").click();  
+  document.getElementById("selectFiles").addEventListener('change', function(e){
+    var jsonFile = document.getElementById("selectFiles").files;
+    if (jsonFile.length <= 0) {
+      return false;
+    };
+    screens.MENU.scrollIntoView({behavior: "smooth"});
+  })
+});
 
 /**
  * This moves the user to the menu screen
  * button click eventListeners -> scroll into view
  */
-document.getElementById("login").addEventListener("click", (e) =>{
-    screens.MENU.scrollIntoView({behavior: "smooth"});
-});
-
 document.getElementById("friends").addEventListener("click", (e) =>{
   screens.CONTENT.scrollIntoView({behavior: "smooth"});
   document.getElementById("screenHeader").innerHTML = "Friends List";
