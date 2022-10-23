@@ -37,7 +37,7 @@ document.getElementById("login").addEventListener("click", (e) =>{
 document.getElementById("friends").addEventListener("click", (e) =>{
     screens.CONTENT.scrollIntoView("behavior: smooth");
 });
-document.getElementById("friendsReqsSent").addEventListener("click", (e) =>{
+document.getElementById("friendReqsSent").addEventListener("click", (e) =>{
   screens.CONTENT.scrollIntoView("behavior: smooth");
 });
 document.getElementById("blockedUsers").addEventListener("click", (e) =>{
