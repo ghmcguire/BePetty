@@ -77,7 +77,13 @@ function sortUsers(list, field, reversed) {
         });
     } else {
         output = list.sort(function(a,b) {
-            return a[field] - b[field];
+            if (a[field] < b[field]) {
+                return -1;
+            }
+            if (a[field] > b[field]) {
+                return 1;
+            }
+            return 0;
         });
     }
     if (reversed) {
