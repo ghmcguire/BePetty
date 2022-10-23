@@ -13,6 +13,10 @@ html, body {
   align-items: center;
 }
 
+#welcomeScreen {
+  justify-content: center;
+}
+
 #login {
   background: #000000;
   border-radius: 10px;
