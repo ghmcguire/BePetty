@@ -33,3 +33,25 @@ function fetchFriends() {
 document.getElementById("login").addEventListener("click", (e) =>{
     screens.MENU.scrollIntoView();
 });
+
+document.getElementById("friends").addEventListener("click", (e) =>{
+    screens.CONTENT.scrollIntoView("behavior: smooth");
+});
+document.getElementById("friendsReqsSent").addEventListener("click", (e) =>{
+  screens.CONTENT.scrollIntoView("behavior: smooth");
+});
+document.getElementById("blockedUsers").addEventListener("click", (e) =>{
+  screens.CONTENT.scrollIntoView("behavior: smooth");
+});
+document.getElementById("deletedFriends").addEventListener("click", (e) =>{
+  screens.CONTENT.scrollIntoView("behavior: smooth");
+});
+document.getElementById("hiddenFriends").addEventListener("click", (e) =>{
+  screens.CONTENT.scrollIntoView("behavior: smooth");
+});
+document.getElementById("ignoredSnaps").addEventListener("click", (e) =>{
+  screens.CONTENT.scrollIntoView("behavior: smooth");
+});
+document.getElementById("pendingReqs").addEventListener("click", (e) =>{
+  screens.CONTENT.scrollIntoView("behavior: smooth");
+});
