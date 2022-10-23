@@ -23,14 +23,19 @@ var friendContainer = document.getElementById("friendContainer");
  * This function creates a friend card
  */
 function createCard([img, friendName, username]){
+    let newEl = document.createElement("div");
     let code = `
-        <div class="card">
-            <img class="userSnapcode" src="${img}">
-            <h2 class="friendName">${friendName}</h2>
-            <h3 class="username">@${username}</h3>
-        </div>
+            <div class="card">
+                <img class="userSnapcode" src="${img}">
+                <h2 class="friendName">${friendName}</h2>
+                <h3 class="username">@${username}</h3>
+            </div>
     `;
-    friendContainer.innerHTML += code;
+    newEl.addEventListener("click", (e) => {
+        Window.location("https://www.snapchat.com/add/" + ["username"])
+    })
+    friendContainer.appendChild(newEl);
+    newEl.outerHTML = code;
 }
 
 /**
@@ -138,6 +143,17 @@ function removeAllChilds() {
  * This moves the user to the menu screen
  * button click eventListeners -> scroll into view
  */
+/**
+ * This moves the user to the menu screen
+ */
+document.getElementById("login").addEventListener("click", (e) =>{
+    screens.MENU.scrollIntoView({behavior: "smooth"});
+});
+
+document.getElementById("openMenu").addEventListener("click", (e) =>{
+    screens.MENU.scrollIntoView({behavior: "smooth"});
+});
+
 document.getElementById("friends").addEventListener("click", (e) =>{
 removeAllChilds()
 screens.CONTENT.scrollIntoView("behavior: smooth");

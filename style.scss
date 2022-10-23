@@ -117,20 +117,35 @@ html,body {
         flex-wrap: wrap;
         align-content: center;
         align-items: center;
+        justify-content: space-evenly;
+        flex-shrink: 0;
+        width: 100%;
+        height:auto;
     }
+    
     .card {
         background: #FFFFFF;
         border-radius: 10px;
-        width: 33vw;
+        width: 40vw;
+        height: 25vh;
+        margin: 2vw;
+        display: flex;
+        align-content: center;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+
         .userSnapcode {
             height: auto;
-            width: 50vw;
-        }
-        .userFullName {
+            width: 60%;
             margin: 10px;
+        }
+        .friendName {
+            margin: 0px;
         }
         .username {
-            margin: 10px;
+            margin: 0px;
             color: #707070;
             font-weight: 400;
         }
