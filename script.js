@@ -152,15 +152,16 @@ document.getElementById("openMenu").addEventListener("click", (e) =>{
 
 document.getElementById("friends").addEventListener("click", (e) =>{
 removeAllChilds()
-screens.CONTENT.scrollIntoView("behavior: smooth");
-friendsList["Friends"].forEach((user) => {
+screens.CONTENT.scrollIntoView({behavior: "smooth"});
+friendsList["Friends"].forEach((user, index) => {
+    if (!index) return;
     createCard(["https://app.snapchat.com/web/deeplink/snapcode?username=" + user["Username"] + "&type=SVG&bitmoji=disable", user["Display Name"],user["Username"]])
 })
 document.getElementById("screenHeader").innerHTML = "Friends List";
 });
 document.getElementById("friendReqsSent").addEventListener("click", (e) =>{
 removeAllChilds()
-screens.CONTENT.scrollIntoView("behavior: smooth");
+screens.CONTENT.scrollIntoView({behavior: "smooth"});
 friendsList["Friend Requests Sent"].forEach((user) => {
     createCard(["https://app.snapchat.com/web/deeplink/snapcode?username=" + user["Username"] + "&type=SVG&bitmoji=disable", user["Display Name"],user["Username"]])
 })
@@ -168,7 +169,7 @@ document.getElementById("screenHeader").innerHTML = "Friend Requests Sent";
 });
 document.getElementById("blockedUsers").addEventListener("click", (e) =>{
 removeAllChilds()
-screens.CONTENT.scrollIntoView("behavior: smooth");
+screens.CONTENT.scrollIntoView({behavior: "smooth"});
 friendsList["Blocked Users"].forEach((user) => {
     createCard(["https://app.snapchat.com/web/deeplink/snapcode?username=" + user["Username"] + "&type=SVG&bitmoji=disable", user["Display Name"],user["Username"]])
 })
@@ -176,7 +177,7 @@ document.getElementById("screenHeader").innerHTML = "Blocked Users";
 });
 document.getElementById("deletedFriends").addEventListener("click", (e) =>{
 removeAllChilds()
-screens.CONTENT.scrollIntoView("behavior: smooth");
+screens.CONTENT.scrollIntoView({behavior: "smooth"});
 friendsList["Deleted Friends"].forEach((user) => {
     createCard(["https://app.snapchat.com/web/deeplink/snapcode?username=" + user["Username"] + "&type=SVG&bitmoji=disable", user["Display Name"],user["Username"]])
 })
@@ -184,7 +185,7 @@ document.getElementById("screenHeader").innerHTML = "Deleted Friends";
 });
 document.getElementById("hiddenFriends").addEventListener("click", (e) =>{
 removeAllChilds()
-screens.CONTENT.scrollIntoView("behavior: smooth");
+screens.CONTENT.scrollIntoView({behavior: "smooth"});
 friendsList["Hidden Friend Suggestions"].forEach((user) => {
     createCard(["https://app.snapchat.com/web/deeplink/snapcode?username=" + user["Username"] + "&type=SVG&bitmoji=disable", user["Display Name"],user["Username"]])
 })
@@ -192,7 +193,7 @@ document.getElementById("screenHeader").innerHTML = "Hidden Suggestions";
 });
 document.getElementById("ignoredSnaps").addEventListener("click", (e) =>{
 removeAllChilds()
-screens.CONTENT.scrollIntoView("behavior: smooth");
+screens.CONTENT.scrollIntoView({behavior: "smooth"});
 friendsList["Ignored Snapchatters"].forEach((user) => {
     createCard(["https://app.snapchat.com/web/deeplink/snapcode?username=" + user["Username"] + "&type=SVG&bitmoji=disable", user["Display Name"],user["Username"]])
 })
@@ -200,7 +201,7 @@ document.getElementById("screenHeader").innerHTML = "Ignored Snapchatters";
 });
 document.getElementById("pendingReqs").addEventListener("click", (e) =>{
 removeAllChilds()
-screens.CONTENT.scrollIntoView("behavior: smooth");
+screens.CONTENT.scrollIntoView({behavior: "smooth"});
 friendsList["Pending Requests"].forEach((user) => {
     createCard(["https://app.snapchat.com/web/deeplink/snapcode?username=" + user["Username"] + "&type=SVG&bitmoji=disable", user["Display Name"],user["Username"]])
 })
