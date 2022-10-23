@@ -75,7 +75,7 @@ function sortUsers(list, field, reversed) {
 function setUser() {
   var mainUser = sortUsers(friendsList["Friends"], "Creation Timestamp", false)[0];
   document.getElementById("userFullName").innerHTML = mainUser["Display Name"];
-  document.getElementById("username").innerHTML = mainUser["Username"];
+  document.getElementById("username").innerHTML = "@" + mainUser["Username"];
   document.getElementById("userImage").innerHTML = "https://app.snapchat.com/web/deeplink/snapcode?username=" + mainUser["Username"] + "&type=SVG&bitmoji=disable";
 }
 
