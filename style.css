@@ -78,4 +78,16 @@ html, body {
 }
 #menuScreen #menuOptions i, #menuScreen #menuOptions p {
   color: #707070;
+}
+
+#contentScreen #contentHeaderBar #openMenu {
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: nowrap;
+  font-weight: bold;
+  color: black;
 }/*# sourceMappingURL=style.css.map */
