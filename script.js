@@ -20,7 +20,21 @@ function fetchFriends() {
       });
 }
 
+function sortUsersByTimestamp(list, field) {
+    if (field.contains("Timestamp")) {
+        return list.sort(function(a,b) {
+            return Date.parse(a[field]) - Date.parse(b[field]);
+        });
+    } else {
+        return list.sort(function(a,b) {
+            return a[field] - b[field];
+        });
+    }
+}
 
+/**
+ * This moves the user to the menu screen
+ */
 document.getElementById("login").addEventListener("click", (e) =>{
-    screens.MENU.scrollIntoView();
+    screens.MENU.scrollIntoView({behavior: "smooth"});
 });
