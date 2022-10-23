@@ -81,10 +81,15 @@ html,body {
 }
 
 #contentScreen {
-    #contentheaderBar {
-        width: 100vw;
+    #contentHeaderBar {
         #openMenu {
-            display: inline;
+            width: 100vw;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            align-content: center;
+            flex-wrap: nowrap;
             font-weight: bold;
             color: black;
         }
