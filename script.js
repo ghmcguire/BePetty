@@ -7,7 +7,7 @@ const screens = {
     "CONTENT": document.getElementById("contentScreen")
 };
 /**
- * This loads friends.json file into an object called freindsList
+ * This loads friends.json file into an object called friendsList
  */
 var friendsList = fetchFriends();
 function fetchFriends() {
