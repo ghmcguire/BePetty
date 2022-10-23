@@ -1,6 +1,5 @@
 html, body {
   margin: 0;
-  overflow: hidden;
   font-family: HelveticaNeue-Light, "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   background: #F7F8F9;
 }
@@ -75,6 +74,9 @@ html, body {
 #menuScreen #menuOptions .menuOption h3 {
   margin: 0;
   font-weight: bold;
+}
+#menuScreen #menuOptions p {
+  margin-right: 5px;
 }
 #menuScreen #menuOptions i, #menuScreen #menuOptions p {
   color: #707070;
