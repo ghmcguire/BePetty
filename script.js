@@ -146,10 +146,6 @@ function removeAllChilds() {
 /**
  * This moves the user to the menu screen
  */
-document.getElementById("login").addEventListener("click", (e) =>{
-    screens.MENU.scrollIntoView({behavior: "smooth"});
-});
-
 document.getElementById("openMenu").addEventListener("click", (e) =>{
     screens.MENU.scrollIntoView({behavior: "smooth"});
 });
