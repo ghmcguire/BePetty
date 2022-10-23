@@ -20,16 +20,32 @@ html, body {
   padding: 10px 20px;
 }
 
-#menu #userCard {
+#menuScreen {
+  justify-content: center;
+}
+#menuScreen #userCard {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 90%;
 }
-#menu #menuOptions {
+#menuScreen #userCard .userSnapcode {
+  height: auto;
+  width: 50vw;
+}
+#menuScreen #userCard #userFullName {
+  margin: 0;
+}
+#menuScreen #userCard #username {
+  margin: 0;
+}
+#menuScreen #menuOptions {
   display: flex;
   flex-direction: column;
+  width: 90%;
 }
-#menu #menuOptions .menuOption {
+#menuScreen #menuOptions .menuOption {
+  font-weight: bold;
   background: white;
   width: 100%;
   border-radius: 10px;
