@@ -13,6 +13,10 @@ html, body {
   align-items: center;
 }
 
+#selectFiles {
+  display: none;
+}
+
 #welcomeScreen {
   justify-content: space-evenly;
 }
