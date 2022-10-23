@@ -149,6 +149,10 @@ document.getElementById("login").addEventListener("click", (e) =>{
     screens.MENU.scrollIntoView({behavior: "smooth"});
 });
 
+document.getElementById("openMenu").addEventListener("click", (e) =>{
+    screens.MENU.scrollIntoView({behavior: "smooth"});
+});
+
 document.getElementById("friends").addEventListener("click", (e) =>{
 removeAllChilds()
 screens.CONTENT.scrollIntoView("behavior: smooth");
