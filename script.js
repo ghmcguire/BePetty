@@ -18,15 +18,16 @@ const options = {
 };
 
 var friendContainer = document.querySelector(".friends-container");
+
 /**
  * This function creates a friend card
  */
-function createCard([img, friendName, username]){
+function createCard([friendName, username]){
     let code = `
-    <div class="card">
-            <img class="userSnapcode" src="${img}">
-            <h2 id="friendName">${friendName}</h2>
-            <h3 id="username">${username}</h3>
+        <div class="card">
+            <img class="userSnapcode" src="https://app.snapchat.com/web/deeplink/snapcode?username=${username}&type=SVG&bitmoji=disable">
+            <h2 class="friendName">${friendName}</h2>
+            <h3 class="username">${username}</h3>
         </div>
     `;
     products.innerHTML += code;
