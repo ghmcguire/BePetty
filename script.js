@@ -17,6 +17,21 @@ const options = {
     "PENDING": document.getElementById("pendingReqs")
 };
 
+var friendContainer = document.querySelector(".friends-container");
+/**
+ * This function creates a friend card
+ */
+function createCard([img, friendName, username]){
+    let code = `
+    <div class="card">
+            <img class="userSnapcode" src="${img}">
+            <h2 id="friendName">${friendName}</h2>
+            <h3 id="username">${username}</h3>
+        </div>
+    `;
+    products.innerHTML += code;
+}
+
 /**
  * This loads friends.json file into an object called friendsList
  */
@@ -72,11 +87,15 @@ function sortUsers(list, field, reversed) {
     }
 }
 
+/**
+ * This sets up the user's profile info
+ */
 function setUser() {
   var mainUser = sortUsers(friendsList["Friends"], "Creation Timestamp", false)[0];
   document.getElementById("userFullName").innerHTML = mainUser["Display Name"];
-  document.getElementById("username").innerHTML = "@" + mainUser["Username"];
-  document.getElementById("userImage").innerHTML = "https://app.snapchat.com/web/deeplink/snapcode?username=" + mainUser["Username"] + "&type=SVG&bitmoji=disable";
+  document.getElementById("username").innerHTML = mainUser["Username"];
+  var imgString = "https://app.snapchat.com/web/deeplink/snapcode?username=" + mainUser["Username"] + "&type=SVG&bitmoji=disable";
+  document.getElementById("userImage").src =  imgString; 
 }
 
 /**
