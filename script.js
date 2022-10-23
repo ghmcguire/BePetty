@@ -16,6 +16,7 @@ const options = {
     "IGNORED": document.getElementById("ignoredSnaps"),
     "PENDING": document.getElementById("pendingReqs")
 };
+
 /**
  * This loads friends.json file into an object called friendsList
  */

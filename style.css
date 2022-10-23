@@ -78,4 +78,13 @@ html, body {
 }
 #menuScreen #menuOptions i, #menuScreen #menuOptions p {
   color: #707070;
+}
+
+#contentScreen #contentheaderBar {
+  width: 100vw;
+}
+#contentScreen #contentheaderBar #openMenu {
+  display: inline;
+  font-weight: bold;
+  color: black;
 }/*# sourceMappingURL=style.css.map */

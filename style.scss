@@ -79,3 +79,14 @@ html,body {
             }
         }
 }
+
+#contentScreen {
+    #contentheaderBar {
+        width: 100vw;
+        #openMenu {
+            display: inline;
+            font-weight: bold;
+            color: black;
+        }
+    }
+}
