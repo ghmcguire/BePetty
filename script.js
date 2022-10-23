@@ -17,7 +17,7 @@ const options = {
     "PENDING": document.getElementById("pendingReqs")
 };
 
-const friendContainer = document.querySelector(".friends-container");
+var friendContainer = document.querySelector(".friends-container");
 /**
  * This function creates a friend card
  */
