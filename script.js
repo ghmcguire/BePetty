@@ -25,15 +25,14 @@ var friendContainer = document.getElementById("friendContainer");
 function createCard([img, friendName, username]){
     let newEl = document.createElement("div");
     let code = `
+            <a href="https://www.snapchat.com/add/${username}">
             <div class="card">
                 <img class="userSnapcode" src="${img}">
                 <h2 class="friendName">${friendName}</h2>
                 <h3 class="username">@${username}</h3>
             </div>
+            </a>
     `;
-    newEl.addEventListener("click", (e) => {
-        Window.location("https://www.snapchat.com/add/" + ["username"])
-    })
     friendContainer.appendChild(newEl);
     newEl.outerHTML = code;
 }
