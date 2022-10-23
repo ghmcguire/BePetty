@@ -29,7 +29,9 @@ function fetchFriends() {
       });
 }
 
-
+/**
+ * button click eventListeners -> scroll into view
+ */
 document.getElementById("login").addEventListener("click", (e) =>{
     screens.MENU.scrollIntoView();
 });
@@ -37,7 +39,7 @@ document.getElementById("login").addEventListener("click", (e) =>{
 document.getElementById("friends").addEventListener("click", (e) =>{
     screens.CONTENT.scrollIntoView("behavior: smooth");
 });
-document.getElementById("friendsReqsSent").addEventListener("click", (e) =>{
+document.getElementById("friendReqsSent").addEventListener("click", (e) =>{
   screens.CONTENT.scrollIntoView("behavior: smooth");
 });
 document.getElementById("blockedUsers").addEventListener("click", (e) =>{
@@ -55,3 +57,4 @@ document.getElementById("ignoredSnaps").addEventListener("click", (e) =>{
 document.getElementById("pendingReqs").addEventListener("click", (e) =>{
   screens.CONTENT.scrollIntoView("behavior: smooth");
 });
+
