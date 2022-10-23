@@ -54,7 +54,7 @@ document.getElementById("deletedFriends").addEventListener("click", (e) =>{
 });
 document.getElementById("hiddenFriends").addEventListener("click", (e) =>{
   screens.CONTENT.scrollIntoView("behavior: smooth");
-  document.getElementById("screenHeader").innerHTML = "Hidden Friend Suggestions";
+  document.getElementById("screenHeader").innerHTML = "Hidden Suggestions";
 });
 document.getElementById("ignoredSnaps").addEventListener("click", (e) =>{
   screens.CONTENT.scrollIntoView("behavior: smooth");
