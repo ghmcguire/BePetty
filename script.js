@@ -6,6 +6,7 @@ const screens = {
     "MENU": document.getElementById("menuScreen"),
     "CONTENT": document.getElementById("contentScreen")
 };
+
 const options = {
     "FRIENDS": document.getElementById("friends"),
     "SENT": document.getElementById("friendsReqsSent"),
@@ -29,6 +30,14 @@ function fetchFriends() {
       });
 }
 
+/**
+ * Sorts users by a specific parameter
+ * @param {*} list The array to be sorted. Must be a subarray of friendsList
+ *                  (ex. friendsList["friends"])
+ * @param {*} field The field to sort users by
+ * @param {*} reversed Set to true for descending order or false for ascending
+ * @returns A sorted list of friends
+ */
 function sortUsers(list, field, reversed) {
     let output = null;
     if (field.includes("Timestamp")) {
