@@ -36,13 +36,13 @@ html, body {
 }
 #menuScreen #userCard .userSnapcode {
   height: auto;
-  width: 50vw;
+  width: 40vw;
 }
 #menuScreen #userCard #userFullName {
-  margin: 0;
+  margin: 5px;
 }
 #menuScreen #userCard #username {
-  margin: 0;
+  margin: 5px;
   color: #707070;
   font-weight: 400;
 }
@@ -92,4 +92,21 @@ html, body {
   flex-wrap: nowrap;
   font-weight: bold;
   color: black;
+}
+#contentScreen .card {
+  background: #FFFFFF;
+  border-radius: 10px;
+  width: 33vw;
+}
+#contentScreen .card .userSnapcode {
+  height: auto;
+  width: 50vw;
+}
+#contentScreen .card .userFullName {
+  margin: 10px;
+}
+#contentScreen .card .username {
+  margin: 10px;
+  color: #707070;
+  font-weight: 400;
 }/*# sourceMappingURL=style.css.map */
