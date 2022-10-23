@@ -46,11 +46,16 @@ function sortUsers(list, field, reversed) {
         return output;
     }
 }
+
 /**
- * button click eventListeners -> scroll into view
+ * This sets the count for each category
  */
+document.getElementById("pFriends").innerHTML = friendsList["Friends"].length;
+document.getElementById("pSent").innerHTML = friendsList["Friend Requests Sent"].length;
+
 /**
  * This moves the user to the menu screen
+ * button click eventListeners -> scroll into view
  */
 document.getElementById("login").addEventListener("click", (e) =>{
     screens.MENU.scrollIntoView({behavior: "smooth"});
