@@ -20,15 +20,21 @@ function fetchFriends() {
       });
 }
 
-function sortUsersByTimestamp(list, field) {
-    if (field.contains("Timestamp")) {
-        return list.sort(function(a,b) {
+function sortUsers(list, field, reversed) {
+    let output = null;
+    if (field.includes("Timestamp")) {
+        output = list.sort(function(a,b) {
             return Date.parse(a[field]) - Date.parse(b[field]);
         });
     } else {
-        return list.sort(function(a,b) {
+        output = list.sort(function(a,b) {
             return a[field] - b[field];
         });
+    }
+    if (reversed) {
+        return output.reverse()
+    } else {
+        return output;
     }
 }
 
