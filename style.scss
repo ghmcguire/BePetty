@@ -1,6 +1,6 @@
 html,body {
     margin:0;
-    // overflow: hidden; //Uncomment to hide screens beyond Welcome
+    overflow: hidden; //Uncomment to hide screens beyond Welcome
     font-family: HelveticaNeue-Light,'Helvetica Neue Light','Helvetica Neue',Helvetica,Arial,'Lucida Grande',sans-serif;
     background: #F7F8F9;
 }
@@ -78,4 +78,20 @@ html,body {
                 color: #707070;
             }
         }
+}
+
+#contentScreen {
+    #contentHeaderBar {
+        #openMenu {
+            width: 100vw;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            align-content: center;
+            flex-wrap: nowrap;
+            font-weight: bold;
+            color: black;
+        }
+    }
 }
