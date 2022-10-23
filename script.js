@@ -49,6 +49,29 @@ function fetchFriends() {
       });
 }
 
+var friendsList;
+
+/**
+ * This allows the user to upload their json file and to scroll afterwards
+ */
+ document.getElementById("login").addEventListener("click", (e) =>{
+  document.getElementById("selectFiles").click();  
+  document.getElementById("selectFiles").addEventListener('change', function(e){
+    var file = document.getElementById("selectFiles").files;
+    if (file.length <= 0) {
+      return false;
+    };
+    screens.MENU.scrollIntoView({behavior: "smooth"});
+    // friendsList = new FileReader();
+    // friendsList.readAsText(file.item(0))
+    // friendsList.onload = () => {
+    //   friendsList = JSON.parse(friendsList.result);
+    //   setUser();
+    //   setCount();
+    // }
+  })
+});
+
 /**
  * This sets the count for each category
  */
