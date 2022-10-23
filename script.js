@@ -26,7 +26,22 @@ function fetchFriends() {
       })
       .then((data) => {
         friendsList = data;
+        setCount();
+        setUser();
       });
+}
+
+/**
+ * This sets the count for each category
+ */
+ function setCount() {
+  document.getElementById("pFriends").innerHTML = friendsList["Friends"].length;
+  document.getElementById("pSent").innerHTML = friendsList["Friend Requests Sent"].length;
+  document.getElementById("pBlocked").innerHTML = friendsList["Blocked Users"].length;
+  document.getElementById("pDeleted").innerHTML = friendsList["Deleted Friends"].length;
+  document.getElementById("pHidden").innerHTML = friendsList["Hidden Friend Suggestions"].length;
+  document.getElementById("pIgnored").innerHTML = friendsList["Ignored Snapchatters"].length;
+  document.getElementById("pPending").innerHTML = friendsList["Pending Requests"].length;
 }
 
 function sortUsers(list, field, reversed) {
@@ -47,11 +62,12 @@ function sortUsers(list, field, reversed) {
     }
 }
 
-/**
- * This sets the count for each category
- */
-document.getElementById("pFriends").innerHTML = friendsList["Friends"].length;
-document.getElementById("pSent").innerHTML = friendsList["Friend Requests Sent"].length;
+function setUser() {
+  var mainUser = sortUsers(friendsList["Friends"], "Creation Timestamp", false)[0];
+  document.getElementById("userFullName").innerHTML = mainUser["Display Name"];
+  document.getElementById("username").innerHTML = mainUser["Username"];
+  document.getElementById("userImage").innerHTML = mainUser["Username"];
+}
 
 /**
  * This moves the user to the menu screen
